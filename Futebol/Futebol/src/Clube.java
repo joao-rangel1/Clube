@@ -89,7 +89,15 @@ public class Clube {
         return time;
     }
 
-
+    // metodo simples usando collections para ordenar os jogadores por salario
+    public List<Jogador> ordenarPorSalario() {
+        List<Jogador> jogadores = new ArrayList<Jogador>();
+        for (Jogador jogador : time.values()) {
+            jogadores.add(jogador);
+        }
+        Collections.sort(jogadores, (j1, j2) -> Double.compare(j1.getSalario(), j2.getSalario()));
+        return jogadores;
+    }
 
 
 }
